@@ -1,13 +1,15 @@
+import Footer from './Footer';
 import Header from './Header';
 import Sect1 from './Sect1';
 
 function App() {
   return (
-    <div>
-    <Header/>
-    <Sect1/>
-    </div>
-    )
+    <>
+      <Header/>
+      <Sect1/>
+      <Footer />
+    </>
+  )
 }
 
 export default App;
