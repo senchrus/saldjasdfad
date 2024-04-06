@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @font-face {
     font-family: "regtext";
     src: url("./fonts/TildaSans-Light.ttf");
@@ -18,3 +14,37 @@
     font-family: "karmina";
     src: url("./fonts/Karmina.otf");
 }
+#app {
+    height: 1800px;
+  }
+  html,
+  body {
+    position: relative;
+    height: 1000px;
+    
+  }
+  
+  body {
+    background: #0F0707;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .swiper {
+    width: 100%;
+    height: 100vh;
+  }
+  
+  #sliderMain .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+  
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  

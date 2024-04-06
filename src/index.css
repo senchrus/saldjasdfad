@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+    font-family: "regtext";
+    src: url("./fonts/TildaSans-Light.ttf");
+}
+@font-face {
+    font-family: "zagtext";
+    src: url("./fonts/TildaSans-Black.ttf");
+}
+@font-face{
+    font-family: "kompost";
+    src: url("./fonts/kom-post.ttf");
+}
+@font-face{
+    font-family: "karmina";
+    src: url("./fonts/Karmina.otf");
+}
+@font-face{
+    font-family: "semibold";
+    src: url("./fonts/TildaSans-Semibold.ttf");
+}
+@font-face{
+    font-family: "regular";
+    src: url("./fonts/TildaSans-Regular.ttf");
+}

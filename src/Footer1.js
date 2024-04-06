@@ -1,6 +1,6 @@
-import vk from './logo-vk.svg';
-import tg from './logo-tg.svg';
-import wp from './logo-wp.svg';
+import vk from './images/logo-vk.svg';
+import tg from './images/logo-tg.svg';
+import wp from './images/logo-wp.svg';
 
 function Footer() {
     return (

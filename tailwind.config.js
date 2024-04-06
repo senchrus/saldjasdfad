@@ -9,11 +9,14 @@ module.exports = {
         "Light": ["regtext"],
         "Black": ["zagtext"],
         "Kompost": ["kompost"],
-        "Karmina" : ["karmina"]
+        "Karmina" : ["karmina"],
+        "Semibold" : ["semibold"],
+        "Regular" : ["regular"],
       },
       colors: {
         "Black" : "#0F0707",
-        "Zelya" : "#87B553"
+        "Zelya" : "#87B553",
+        "Gray" : "#B3B3B3" , 
       }
     },
   },
