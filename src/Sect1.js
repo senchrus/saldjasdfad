@@ -3,8 +3,8 @@ import Kniggers from './images/Kniggers.png';
 import strelk from './images/strelk.png';
 function Sect1() {
     return(
-        <div className='bg-Black h-[100vh] flex justify-end '>
-            <div className='relative flex flex-col w-[700px] pt-[200px] right-[400px] '>
+        <div className='bg-Black h-[100vh]  flex justify-end '>
+            <div className='relative flex flex-col w-[600px] pt-[200px] right-[400px] '>
                 <p className='font-Kompost text-5xl text-Zelya '>Открой магию слов</p>
                 <p className='font-Karmina text-[150px] text-[#FFFFFF] mt-[-70px] mb-[-20px] tracking-wider '>Чернокнижник-</p>
                 <p className='font-Light text-[#FFFFFF] text-xl w-[700px] pb-[20px] '>ваш проводник в мир тайн и магии литературы. 
@@ -14,7 +14,7 @@ function Sect1() {
                 <div className=' flex justify-end'>
                 <button className='flex justify-end  pl-[40px] pr-[10px] py-[10px]  rounded-lg border-4 border-Zelya gap-[40px] text-3xl items-center z-10'>
                     <p className='text-[#FFFFFF] font-Light '>Погрузится в магию</p>
-                    <img src={strelk} className='flex '/>
+                    <img src={strelk} className='flex sm:hidden'/>
                 </button>
                 </div>
             </div>

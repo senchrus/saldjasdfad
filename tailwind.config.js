@@ -17,6 +17,7 @@ module.exports = {
         "Black" : "#0F0707",
         "Zelya" : "#87B553",
         "Gray" : "#B3B3B3" , 
+        
       }
     },
   },

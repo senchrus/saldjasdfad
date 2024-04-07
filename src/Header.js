@@ -5,7 +5,7 @@ import './index.css';
 
 function Header() {
   return (
-    <div className="fixed w-full flex bg-Black justify-between px-20 items-center z-10 px-[5%]">
+    <div className="fixed w-full flex bg-Black justify-between px-20 items-center z-30 px-[5%]">
         <img src = {logo}  alt = "" className=""></img>
         <div className='text-white font-Light flex gap-[150px] text-lg mt-[10px] '>
           <a className = " " href="#home">Книги</a>
