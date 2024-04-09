@@ -14,8 +14,8 @@ function Header() {
           <a href="#about"> Контакты</a>
         </div>
         <div className='flex gap-8 h-[10%] mt-[10px]'>
-        <a href="#govno" ><img src={user}/></a>
-        <a href="#govn"><img src={cart}/></a>
+        <a href="#govno" ><img src={user} alt=''/></a>
+        <a href="#govn"><img src={cart} alt=''/></a>
         </div>
     </div>
   );

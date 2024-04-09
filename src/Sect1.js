@@ -1,8 +1,12 @@
 import './index.css';
 import Kniggers from './images/Kniggers.png';
 import strelk from './images/strelk.png';
+import vk from './images/logo-vk.svg';
+import tg from './images/logo-tg.svg';
+import wp from './images/logo-wp.svg';
 function Sect1() {
     return(
+        <>
         <div className='bg-Black h-[100vh]  flex justify-end '>
             <div className='relative flex flex-col w-[600px] pt-[200px] right-[400px] '>
                 <p className='font-Kompost text-5xl text-Zelya '>Открой магию слов</p>
@@ -14,12 +18,18 @@ function Sect1() {
                 <div className=' flex justify-end'>
                 <button className='flex justify-end  pl-[40px] pr-[10px] py-[10px]  rounded-lg border-4 border-Zelya gap-[40px] text-3xl items-center z-10'>
                     <p className='text-[#FFFFFF] font-Light '>Погрузится в магию</p>
-                    <img src={strelk} className='flex sm:hidden'/>
+                    <img src={strelk} className='flex' alt=''/>
                 </button>
                 </div>
             </div>
             <img src={Kniggers}  className='w-[1200px] absolute h-[100vh] object-cover right-[600px] ' alt=''/>
         </div>
+        <div className='fixed bottom-12 right-24 flex justify-end w-full gap-12 h-8 '>
+            <img src={vk} alt=''/>
+            <img src={tg} alt=''/>
+            <img src={wp} alt=''/>
+        </div>
+        </>
     )
 }
 export default Sect1;
