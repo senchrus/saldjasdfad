@@ -8,10 +8,13 @@ import tunnel from "./images/tunnel.png"
 import Dune from "./images/Dune.png"
 import Segun from "./images/Segun.png"
 import Fantasy2 from "./images/Fantasy2.png"
+import Footer from './Footer';
+import Branch from './images/Branch.png'
+import Stars from './images/Stars.png'
 
 function Journal(){
     return (
-        <>
+        <main className='relative'>
         <Header/>
         <div className='px-[5%]'>
         <Zagolovok title='Журнал Чернокнижник' pt='32'/>
@@ -26,14 +29,16 @@ function Journal(){
         </div>
         <div className='px-[5%]'>
         <Zagolovok title='Новости' pt="14"/>
-        <div className='flex  p-[24px] justify-center'>
+        <div className='flex  p-[24px] justify-center '>
             <div className='flex flex-row gap-6'>
-            <Nblock title="5 апреля 2024 г." desc="Что по книгам: фильм по «К себе нежно» и программа ярмарки non-fiction" color="#64818E"/>
-            <Nblock title="5 апреля 2024 г." desc="Что по книгам: сериал по «Задаче трёх тел» и целеустремлённые миллениалы" color="#64818E"/>
-            <Nblock title="5 апреля 2024 г." desc="Что по книгам: новый роман Маркеса и сюжеты, покорившие «Букмейт»" color="#64818E"/>
-            <Nblock title="5 апреля 2024 г." desc="Что по книгам: прабабушка Тейлор Свифт и пустынный Арракис" color="#64818E"/>
-            </div>
+            <Nblock title="5 апреля 2024 г." desc="Что по книгам: фильм по «К себе нежно» и программа ярмарки non-fiction" className="bg-light-blue"/>
+            <Nblock title="5 апреля 2024 г." desc="Что по книгам: сериал по «Задаче трёх тел» и целеустремлённые миллениалы" className="bg-N2"/>
+            <Nblock title="5 апреля 2024 г." desc="Что по книгам: новый роман Маркеса и сюжеты, покорившие «Букмейт»" className="bg-N3"/>
+            <Nblock title="5 апреля 2024 г." desc="Что по книгам: прабабушка Тейлор Свифт и пустынный Арракис" className="bg-N4"/>
+            </div> 
         </div>
+        <img src={Branch} alt='' className='absolute right-0 z-20 bottom-[600px] '/>
+        <img src={Stars} alt='' className='absolute right-0 z-20 bottom-[600px] '/>
         </div>
         <div className='px-[5%]'>
         <Zagolovok title='Лонгриды' pt="14"/>
@@ -57,7 +62,8 @@ function Journal(){
         </div>
         
         </div>
-        </>
+        <Footer/>
+        </main>
     );
 }
 function JBlock({img,title,desc}) {
@@ -65,7 +71,7 @@ function JBlock({img,title,desc}) {
         <div className='relative w-full h-full
             after:content after:w-full after:h-full after:absolute after:bottom-0 after:left-0 after:z-10
             after:bg-gradient-to-t after:from-black after:to-transparent after:to-70% after:rounded-b-xl'>
-            <img src={img} className='rounded-xl w-full h-full object-cover'/>
+            <img src={img} className='rounded-xl w-full h-full object-cover' alt=''/>
             <div className='absolute  w-full left-[10px] bottom-[20px]  z-20'>
                 <p className='text-xl  font-Semibold  text-white'>{title}</p>
                 <p className='text-sm  font-Regular text-Gray'>{desc}</p>
@@ -73,12 +79,12 @@ function JBlock({img,title,desc}) {
         </div>
     );
 };
-function Nblock({title,desc,color}) {
+function Nblock({title,desc,className}) {
     return (
         <div className='relative w-full h-full pt-8'>
-        <div className={'w-[280px] h-[190px]  pt-[15px] bg-['+color+'] rounded-xl flex  pl-[15px] flex-col'}>
+        <div className={'w-[280px] h-[190px]  pt-[15px] rounded-xl flex  pl-[15px] flex-col' + (className ? ' ' + className : '')}>
         <p className='text-lg font-Semibold  text-white'>{title}</p>
-        <p className='text-xl font-Regular text-Gray'>{desc}</p>
+        <p className='text-xl font-Regular text-Black'>{desc}</p>
         </div>
         <div className='absolute   z-20 '>
         
