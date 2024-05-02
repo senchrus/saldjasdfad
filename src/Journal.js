@@ -97,4 +97,4 @@ function Zagolovok({title, pt}){
     )
 }
 
-export default Journal;
+export default Journal; 

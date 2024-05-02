@@ -9,7 +9,7 @@ import tg from './images/logo-tg.svg';
 import wp from './images/logo-wp.svg';
 import starichok from './images/starichok.png'
 
-function Footer2() {
+function Footer() {
     return (
     <div className='flex gap-[200px] relative '>
     <div className=' flex items-center relative '>
@@ -55,9 +55,9 @@ function Footer2() {
             <p>© 2024, Чернокнижник</p>
         </div>
     </div>
-    <img src = {starichok} alt='' className='absolute right-0 bottom-0'/>
+    <img src = {starichok} alt='' className='absolute right-0 bottom-0 '/>
     </div>
     );
   }
   
-  export default Footer2;
+  export default Footer;

@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import './App.css';
 import Njournal from "./Njournal";
+import Sales from "./Sales";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
   },{
     path: "/njournal",
     element: <Njournal />
+  },
+  {
+    path: "/sales",
+    element: <Sales/>
   },
 ]);
 

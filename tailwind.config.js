@@ -22,7 +22,7 @@ module.exports = {
         "N2" : "#BEA45D",
         "N3" : "#619A87",
         "N4" : "#62749E",
-
+        "SaleEnd": "#D9D9D9",
         
       }
     },
