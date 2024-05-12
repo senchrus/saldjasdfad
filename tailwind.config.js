@@ -12,6 +12,8 @@ module.exports = {
         "Karmina" : ["karmina"],
         "Semibold" : ["semibold"],
         "Regular" : ["regular"],
+        "HMedium" : ["HMedium"],
+        "HBold" : ["HBold"]
       },
       colors: {
         "Black" : "#0F0707",

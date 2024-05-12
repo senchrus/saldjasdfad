@@ -7,6 +7,8 @@ import {
 import './App.css';
 import Njournal from "./Njournal";
 import Sales from "./Sales";
+import Log from "./Log";
+import Reg from "./Register";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +25,14 @@ const router = createBrowserRouter([
   {
     path: "/sales",
     element: <Sales/>
+  },
+  {
+    path: "/login",
+    element: <Log/>
+  },
+  {
+    path: "/register",
+    element: <Reg/>
   },
 ]);
 

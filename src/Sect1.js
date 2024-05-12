@@ -16,9 +16,9 @@ function Sect1() {
                 У нас вы найдете не только произведения из мрачных уголков фэнтези и хоррора, 
                 но и шедевры классики, которые будут вдохновлять и вас, и ваших героев</p>
                 <div className=' flex justify-end'>
-                <button className='flex justify-end  pl-[40px] pr-[10px] py-[10px]  rounded-lg border-4 border-Zelya gap-[40px] text-3xl items-center z-10'>
+                <button className='flex justify-end  pl-[40px] pr-[10px] py-[10px]  rounded-lg border-4 hover:bg-[#5da130] hover:border-[#5da130]  border-Zelya gap-[40px] text-3xl items-center z-10'>
                     <p className='text-[#FFFFFF] font-Light '>Погрузится в магию</p>
-                    <img src={strelk} className='flex' alt=''/>
+                    <img src={strelk} className='flex ' alt=''/>
                 </button>
                 </div>
             </div>
