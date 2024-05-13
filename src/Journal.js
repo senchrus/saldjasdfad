@@ -11,6 +11,7 @@ import Fantasy2 from "./images/Fantasy2.png"
 import Footer from './Footer';
 import Branch from './images/Branch.png'
 import Stars from './images/Stars.png'
+import { Link, ScrollRestoration } from 'react-router-dom';
 
 function Journal(){
     return (
@@ -73,9 +74,10 @@ function JBlock({img,title,desc}) {
             after:bg-gradient-to-t after:from-black after:to-transparent after:to-70% after:rounded-b-xl'>
             <img src={img} className='rounded-xl w-full h-full object-cover' alt=''/>
             <div className='absolute  w-full left-[10px] bottom-[20px]  z-20'>
-                <p className='text-xl  font-Semibold  text-white'>{title}</p>
+                <Link to={"/njournal"}><p className='text-xl  font-Semibold  text-white'>{title}</p></Link>
                 <p className='text-sm  font-Regular text-Gray'>{desc}</p>
             </div>
+            <ScrollRestoration />
         </div>
     );
 };

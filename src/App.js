@@ -9,6 +9,7 @@ import Njournal from "./Njournal";
 import Sales from "./Sales";
 import Log from "./Log";
 import Reg from "./Register";
+import Books from "./Books";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
     path: "/register",
     element: <Reg/>
   },
+  {
+    path:"/store",
+    element: <Books/>
+  }
 ]);
 
 function App() {

@@ -4,7 +4,8 @@ import TopBranch from "./images/TopBranch.png";
 import ProstBranch from "./images/SideBranch.png";
 import Google from "./images/GoogleIcon.svg";
 import React, { useState } from 'react';
-import Logo from "./images/logo.svg"
+import Logo from "./images/logo.svg";
+import { Link, ScrollRestoration } from 'react-router-dom';
 
 function Log () {
     const [showPassword, setshowPassword] = useState(false);
@@ -25,35 +26,31 @@ function Log () {
         <img src={TopBranch} className='absolute top-0 left-[50%] h-[30vh]' alt=''/>
         <img src={ProstBranch} className='absolute right-0 object-cover h-[100vh]' alt=''/>
         <div className='flex flex-col relative '>
-            <div className=' w-full  h-full flex justify-center items-center pl-[20%] pt-[15%] flex-col gap-10'>
+            <div className=' w-full  h-full flex justify-center items-center pl-[20%] pt-[12%] flex-col gap-10'>
                 <div className='flex text-white font-HBold gap-10 text-xl justify-center'>
-                <div className=''>
-                        <p className='text-N4'>Вход</p>
-                        
-                    </div>
+                  <div className=''>
+                      <p className='text-N4'>Вход</p>    
+                  </div>
                     <div class="  sm:max-w-xl sm:mx-auto">
-		            <a href="#" class="font-display max-w-sm font-bold leading-tight">
+		            <Link to={"/register"} class="font-display max-w-sm font-bold leading-tight">
 			            <span class="link link-underline link-underline-black text-white"> Регистрация </span>
-		            </a>
+		            </Link>
 	            </div>
                     
                 </div>
 
                 <div className='gap-4 flex flex-col font-HMedium'>
                     <input className='pl-4 border-b outline-none text-lg  rounded-lg' type="text" placeholder='E-mail' />
-                    <input value={pass} className='pl-4 border-b outline-none text-lg  rounded-lg' type={showPassword ? 'text' : 'password'} placeholder='Пароль' onInput={inputPassword} />
-              <button onClick={handleTogPassVis} className='absolute right-10'>
+                    <input value={pass} className='pl-4 border-b outline-none text-lg  rounded-lg relative' type={showPassword ? 'text' : 'password'} placeholder='Пароль' onInput={inputPassword} />
+                <button onClick={handleTogPassVis} className='absolute right-10'>
                 {
                   showPassword
-                    ? <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M11.9655 4.1621C11.9479 4.2016 11.5245 5.1409 10.5828 6.0826C9.32864 7.33695 7.74385 8 6 8C4.25615 8 2.67135 7.337 1.41716 6.08265C0.475458 5.1409 0.0520088 4.20155 0.0344588 4.16205C0.011739 4.11091 0 4.05556 0 3.9996C0 3.94364 0.011739 3.8883 0.0344588 3.83715C0.0520588 3.79765 0.475458 2.85855 1.41721 1.91695C2.6714 0.6629 4.2561 0 6 0C7.7439 0 9.3286 0.6629 10.5828 1.91695C11.5245 2.85855 11.9479 3.7976 11.9655 3.83715C11.9883 3.8883 12 3.94364 12 3.9996C12 4.05556 11.9882 4.11096 11.9655 4.1621ZM6 5.7996C6.35601 5.7996 6.70402 5.69403 7.00002 5.49625C7.29603 5.29846 7.52674 5.01734 7.66298 4.68843C7.79922 4.35952 7.83486 3.9976 7.76541 3.64844C7.69596 3.29927 7.52452 2.97854 7.27279 2.72681C7.02106 2.47507 6.70033 2.30364 6.35116 2.23419C6.002 2.16473 5.64008 2.20038 5.31117 2.33662C4.98226 2.47285 4.70114 2.70356 4.50336 2.99957C4.30557 3.29558 4.2 3.64359 4.2 3.9996C4.20053 4.47683 4.39034 4.93436 4.72779 5.27181C5.06524 5.60926 5.52277 5.79907 6 5.7996Z" fill="#87B553"/>
-                    </svg>
-                    : <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M11.9655 4.1621C11.9479 4.2016 11.5245 5.1409 10.5828 6.0826C9.32864 7.33695 7.74385 8 6 8C4.25615 8 2.67135 7.337 1.41716 6.08265C0.475458 5.1409 0.0520088 4.20155 0.0344588 4.16205C0.011739 4.11091 0 4.05556 0 3.9996C0 3.94364 0.011739 3.8883 0.0344588 3.83715C0.0520588 3.79765 0.475458 2.85855 1.41721 1.91695C2.6714 0.6629 4.2561 0 6 0C7.7439 0 9.3286 0.6629 10.5828 1.91695C11.5245 2.85855 11.9479 3.7976 11.9655 3.83715C11.9883 3.8883 12 3.94364 12 3.9996C12 4.05556 11.9882 4.11096 11.9655 4.1621ZM6 5.7996C6.35601 5.7996 6.70402 5.69403 7.00002 5.49625C7.29603 5.29846 7.52674 5.01734 7.66298 4.68843C7.79922 4.35952 7.83486 3.9976 7.76541 3.64844C7.69596 3.29927 7.52452 2.97854 7.27279 2.72681C7.02106 2.47507 6.70033 2.30364 6.35116 2.23419C6.002 2.16473 5.64008 2.20038 5.31117 2.33662C4.98226 2.47285 4.70114 2.70356 4.50336 2.99957C4.30557 3.29558 4.2 3.64359 4.2 3.9996C4.20053 4.47683 4.39034 4.93436 4.72779 5.27181C5.06524 5.60926 5.52277 5.79907 6 5.7996Z" fill="#62749E"/>
-                    </svg>
+                    ? <svg className='fill-black h-4' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/></svg>
+                    : <svg className='fill-black h-4' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c8.4-19.3 10.6-41.4 4.8-63.3c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zM373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5L373 389.9z"/></svg>
                 }
               </button>
-                    <label className='text-white flex items-center gap-4'><input
+                    <label className='text-white flex items-center gap-4'>
+                    <input
                     type="checkbox"
                     name="myCheckbox"
                     defaultChecked={true} 
@@ -65,7 +62,7 @@ function Log () {
                         <p className='text-[#FFFFFF] font-HMedium '>Продолжить с Google</p>
                     </button>
                 </div>
-                <img alt='' src={Logo} className='mt-[-30px]'/>
+                <Link to={"/"}><img alt='' src={Logo} className='mt-[-30px]'/></Link>
             </div>
         </div>
         </div>

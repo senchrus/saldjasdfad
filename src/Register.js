@@ -3,7 +3,8 @@ import Starik from "./images/Starik.png";
 import TopBranch from "./images/TopBranch.png";
 import ProstBranch from "./images/SideBranch.png";
 import Google from "./images/GoogleIcon.svg";
-import Logo from "./images/logo.svg"
+import Logo from "./images/logo.svg";
+import { Link, ScrollRestoration } from 'react-router-dom';
 
 function Reg () {
     return (
@@ -12,13 +13,13 @@ function Reg () {
         <img src={TopBranch} className='absolute top-0 left-[50%] h-[30vh]' alt=''/>
         <img src={ProstBranch} className='absolute right-0 object-cover h-[100vh]' alt=''/>
         <div className='flex flex-col relative '>
-            <div className=' w-full  h-full flex justify-center items-center pl-[20%] pt-[10%] flex-col gap-10'>
+            <div className=' w-full  h-full flex justify-center items-center pl-[20%] pt-[8%] flex-col gap-10'>
                 <div className='flex text-white font-HBold gap-10 text-xl justify-center'>
                     
                     <div class="  sm:max-w-xl sm:mx-auto">
-		            <a href="#" class="font-display max-w-sm font-bold leading-tight">
+		            <Link to={"/login"} class="font-display max-w-sm font-bold leading-tight">
 			            <span class="link link-underline link-underline-black text-white"> Вход </span>
-		            </a>
+		            </Link>
 	                </div>
                     <div className=''>
                         <p className='text-N4'>Регистрация</p>
@@ -43,7 +44,8 @@ function Reg () {
                         <p className='text-[#FFFFFF] font-HMedium '>Продолжить с Google</p>
                     </button>
                 </div>
-                <img alt='' src={Logo} className='mt-[-40px]'/>
+                <Link to={"/"}><img alt='' src={Logo} className='mt-[-40px]'/></Link>
+                
             </div>
         </div>
         </div>
