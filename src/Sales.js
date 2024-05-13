@@ -26,7 +26,7 @@ function Sales(){
 function SalesBlock({img,title,desc,className}) {
     return (
         <div className='relative w-full h-full pt-8 '>
-            <div className={'w-full h-[200px]   rounded-xl flex pt-[5px] pb-[5px] flex flex-row gap-10 ' + (className ? ' ' + className : '')}>
+            <div className={'w-full h-[200px]   rounded-xl  pt-[5px] pb-[5px] flex flex-row gap-10 ' + (className ? ' ' + className : '')}>
                     <div className="w-[40%] h-full flex justify-center items-center pl-[15px] ">
                     <img alt="" src={img} className=" "/>
                     </div>
@@ -35,7 +35,7 @@ function SalesBlock({img,title,desc,className}) {
                     <p className='text-lg font-Regular text-Black'>{desc}</p>
                 </div>
                 <div className="flex justify-center items-center p-[10px] ">
-                    <div className="  bg-SaleEnd w-[300px] h-full rounded-2xl flex flex-col  flex items-center relative ">
+                    <div className="  bg-SaleEnd w-[300px] h-full rounded-2xl  flex-col  flex items-center relative ">
                         <div className="flex gap-[10px] justify-center items-center font-Regular text-xl align-top ">
                             <img src={Clock} alt="" />
                             <p>До окончания акции</p>

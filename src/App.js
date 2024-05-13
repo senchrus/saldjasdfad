@@ -10,6 +10,8 @@ import Sales from "./Sales";
 import Log from "./Log";
 import Reg from "./Register";
 import Books from "./Books";
+import CartContextProvider from './Cartcontext';
+import Cart from "./Cart";
 
 const router = createBrowserRouter([
   {
@@ -38,13 +40,19 @@ const router = createBrowserRouter([
   {
     path:"/store",
     element: <Books/>
+  },
+  {
+    path:"/cart",
+    element: <Cart/>
   }
 ]);
 
 function App() {
   return (
     <>
-      <RouterProvider router={router} />
+      <CartContextProvider>
+        <RouterProvider router={router} />
+      </CartContextProvider>
     </>
   );
 }

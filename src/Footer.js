@@ -11,9 +11,9 @@ import starichok from './images/starichok.png'
 
 function Footer() {
     return (
-    <div className='flex gap-[200px] relative '>
+    <div className='flex gap-[100px] relative  w-full'>
     <div className=' flex items-center relative '>
-      <img src={Branch2} alt=''/>
+      <img src={Branch2} alt='' className='lg:w-[100%] lg:h-[100%]'/>
       <img src={logo} alt='' className='w-[240px] h-[140px] absolute left-[200px]'/>
     </div>
     <div className='flex  flex-col justify-center gap-10'>
@@ -40,7 +40,7 @@ function Footer() {
             </div>    
         </div>
     </div>
-    <div className='absolute bottom-24 left-48 font-Light text-white text-lg  flex  gap-10 mb-8 border-t-BorderTop border-t-[0.5px] w-full'>
+    {/* <div className='absolute bottom-24 left-48 font-Light text-white text-lg  flex  gap-10 mb-8 border-t-BorderTop border-t-[0.5px] w-full'>
         <div className='flex gap-32'>
         <a href="#home">О нас</a>
         <a href="#contact" className = "">Контакты</a>
@@ -49,13 +49,13 @@ function Footer() {
         <a href="#about"> Трудоустройство</a>
         </div>
         
-    </div>
+    </div> */}
     <div>
         <div className='absolute bottom-10  flex items-center font-Light text-white text-lg left-[45%] '>
             <p>© 2024, Чернокнижник</p>
         </div>
     </div>
-    <img src = {starichok} alt='' className='absolute right-0 bottom-0 '/>
+    <img src = {starichok} alt='' className='absolute right-0 bottom-0 sm:hidden md:shrink lg:w-[35%] lg:h-[70%] lg:block'/>
     </div>
     );
   }
