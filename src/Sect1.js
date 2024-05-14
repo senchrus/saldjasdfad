@@ -4,6 +4,7 @@ import strelk from './images/strelk.png';
 import vk from './images/logo-vk.svg';
 import tg from './images/logo-tg.svg';
 import wp from './images/logo-wp.svg';
+import { Link } from 'react-router-dom';
 function Sect1() {
     return(
         <>
@@ -16,10 +17,11 @@ function Sect1() {
                 У нас вы найдете не только произведения из мрачных уголков фэнтези и хоррора, 
                 но и шедевры классики, которые будут вдохновлять и вас, и ваших героев</p>
                 <div className=' flex justify-end'>
-                <button className='flex justify-end  pl-[40px] pr-[10px] py-[10px]  rounded-lg border-4 hover:bg-[#5da130] hover:border-[#5da130]  border-Zelya gap-[40px] text-3xl items-center z-10'>
+                <Link to={"/store"}><button className='flex justify-end  pl-[40px] pr-[10px] py-[10px]  rounded-lg border-4 hover:bg-[#5da130] hover:border-[#5da130]  border-Zelya gap-[40px] text-3xl items-center z-10'>
                     <p className='text-[#FFFFFF] font-Light '>Погрузится в магию</p>
                     <img src={strelk} className='flex ' alt=''/>
                 </button>
+                </Link>
                 </div>
             </div>
             <img src={Kniggers}  className='w-[1200px] absolute h-[100vh] object-cover right-[600px] ' alt=''/>
